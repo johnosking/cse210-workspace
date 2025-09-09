@@ -8,23 +8,30 @@ class Program
         string userNumber = Console.ReadLine();
         int magic = int.Parse(userNumber);
     
-        Console.Write("What is your guess? ");
-        string userGuess = Console.ReadLine();
-        int guess = int.Parse(userGuess);
 
-        if (guess < magic)
-        {
-            Console.Write("Guess Higher");
-        }
-        else if (guess == magic)
-        {
-            Console.Write("You guessed it");
-        }
-        else
-        {    
-            Console.Write("Guess Lower");
-        }
 
+        int guess = -1;
+
+        while (guess != magic)
+        {
+            Console.Write("What is your guess? ");
+            string userGuess = Console.ReadLine();
+            guess = int.Parse(userGuess);
+
+            if (guess < magic)
+            {
+                Console.WriteLine("Guess Higher");
+            }
+
+            else if (guess > magic)
+            {    
+                Console.WriteLine("Guess Lower");
+            }
+            else
+            {
+                Console.WriteLine("You guessed it");
+            }    
+        }
 
     }
 }
