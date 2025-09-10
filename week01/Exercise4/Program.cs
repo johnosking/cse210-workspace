@@ -27,5 +27,9 @@ class Program
             sum += number;
         }
         Console.WriteLine($"The sum of numbers is {sum}");
+
+        int average = sum / numbers.Count;
+        Console.WriteLine($"The average is: {average}");
+
     }
 }
